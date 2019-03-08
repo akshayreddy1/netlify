@@ -27,6 +27,12 @@ export default function EarthquakeData(WrappedComponent) {
     }
 
     componentDidMount() {
+      fetch('http://interviewtest.getguru.com/seismic/data.json', {
+        mode: 'no-cors',
+      })
+        .then(response => response.json())
+        .then(json => console.log(json))
+        .catch(cat => console.log(cat));
       /**
        * Write the logic to fetch the earthquakes here
        * It should sort filter and slice the data as soon as it loads.

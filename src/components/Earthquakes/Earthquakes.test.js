@@ -13,7 +13,6 @@ describe('component - Earthquakes', () => {
       <Earthquakes earthquakes={mockEarthquakeData} updateFilter={() => {}} />
     );
     const input = comp.find(EarthquakeFilter);
-
     // All of these values should statically
     // stay the same.  Date is going to be harder because they
     // will probably transform it.

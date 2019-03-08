@@ -6,7 +6,7 @@ Thanks for taking the time to take our Front-end technical assignment! This shou
 
 # Before you start
 
-Make sure you install all the dependencies before you attempt to do anything! You can do that by just running `yarn`. If you don't have yarn you can install it using the instructions [here!](https://yarnpkg.com/lang/en/docs/install/)
+Make sure you install all the dependencies before you attempt to do anything! You can do that by just running `yarn`. If you don't have yarn you can install it using the instructions
 
 Here are some commands you should be familiar with.
 

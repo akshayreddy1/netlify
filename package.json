@@ -5,6 +5,8 @@
   "homepage": "https://guruhq.github.io/guru-frontend-test",
   "dependencies": {
     "classnames": "^2.2.5",
+    "cors": "^2.8.5",
+    "jest": "^24.1.0",
     "moment": "^2.21.0",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
@@ -15,22 +17,18 @@
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
     "precommit": "lint-staged",
-    "build-css":
-      "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-    "watch-css":
-      "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "GENERATE_SOURCEMAP=false react-scripts build",
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
-    "validate:prettier":
-      "node node_modules/prettier/index.js src/**/* --single-quote --trailing-comma 'es5' --write",
+    "validate:prettier": "node node_modules/prettier/index.js src/**/* --single-quote --trailing-comma 'es5' --write",
     "validate:eslint": "node ./node_modules/eslint/bin/eslint ./src --fix",
     "validate:jest": "CI=true yarn test",
     "validate:congratulate": "./bin/congratulate.sh",
-    "validate":
-      "yarn validate:prettier && yarn validate:eslint && yarn validate:jest && yarn validate:congratulate",
+    "validate": "yarn validate:prettier && yarn validate:eslint && yarn validate:jest && yarn validate:congratulate",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
@@ -47,7 +45,7 @@
     "gh-pages": "^1.1.0",
     "husky": "^0.14.3",
     "jest-fetch-mock": "^1.4.2",
-    "lint-staged": "^7.0.0",
+    "lint-staged": "^7.3.0",
     "nock": "^9.2.3",
     "node-sass-chokidar": "^1.1.0",
     "npm-run-all": "^4.1.2",

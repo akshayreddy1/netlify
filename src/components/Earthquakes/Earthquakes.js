@@ -10,9 +10,11 @@ import 'components/Earthquakes/Earthquakes.css';
 class Earthquakes extends PureComponent {
   render() {
     const { updateFilter } = this.props;
-
+    console.log(this.props);
     return (
       <div className="Earthquakes">
+        <EarthquakesHeader />
+        <br />
         <EarthquakeFilter onInput={updateFilter} />
         {/* render all your earthquake rows here! */}
       </div>
